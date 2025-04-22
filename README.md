@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Startup ShowDown
 
-## Getting Started
+FrontEnd para dell-it-academy-22 criada para o projeto da **IT Academy 22**.
 
-First, run the development server:
+## Visão Geral
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Cadastro de Startups: Adicione startups com nome, slogan e ano de fundação
+- Criação de Torneios: Organize torneios com 4 a 8 startups participantes
+- Gerenciamento de Batalhas: Administre confrontos diretos entre startups, registrando eventos que impactam a pontuação
+- Sistema de Pontuação: Eventos positivos (pitches, trações) e negativos (bugs, investidores irritados) alteram os pontos
+- Shark Fight: Sistema de desempate quando startups terminam uma batalha com a mesma pontuação
+- Avanço Automático: O sistema organiza automaticamente as próximas fases quando todas as batalhas são concluídas
+- Relatórios e Resultados: Visualize estatísticas detalhadas de cada startup no torneio
+
+---
+
+## Requisitos de Sistema
+
+```
+Node.js 18.17.0 ou superior
+npm, yarn, pnpm ou bun
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+git clone https://github.com/seu-usuario/startup-showdown.git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+cd startup-showdown
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm install
+```
