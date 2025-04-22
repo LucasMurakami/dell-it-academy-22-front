@@ -1,4 +1,4 @@
-import { FaRocket } from "react-icons/fa";
+import { FaRocket, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -10,8 +10,17 @@ export default function Footer() {
             <span className="font-bold text-white">Startup Showdown</span>
           </div>
           
-          <div className="text-sm">
-            &copy; {new Date().getFullYear()} Startup Showdown. Todos os direitos reservados.
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-blue-400" />
+              <a href="mailto:lucaskaitomurakami@gmail.com" className="text-white hover:text-blue-400 transition-colors">
+                lucaskaitomurakami@gmail.com
+              </a>
+            </div>
+            
+            <div className="text-sm">
+              &copy; {new Date().getFullYear()} Startup Showdown. Todos os direitos reservados.
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import { FaRocket, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { FaRocket, FaBars, FaTimes } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 interface HeaderProps {
   sidebarOpen: boolean;
@@ -6,6 +7,17 @@ interface HeaderProps {
 }
 
 export default function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
+  const [userName, setUserName] = useState<string>("Usuário");
+
+  useEffect(() => {
+    const savedName = localStorage.getItem('userName');
+    if (savedName) {
+      setUserName(savedName);
+    }
+  }, []);
+
+  const userInitial = userName ? userName.charAt(0).toUpperCase() : 'U';
+
   return (
     <header className="fixed w-full z-30 bg-white shadow-sm px-4 py-3 flex justify-between items-center">
       <div className="flex items-center">
@@ -25,10 +37,9 @@ export default function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
         <div className="relative">
           <button className="flex items-center focus:outline-none">
             <span className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-              U
+              {userInitial}
             </span>
-            <span className="hidden md:block ml-2 text-sm font-medium">Usuário</span>
-            <FaChevronDown className="ml-1 text-xs text-gray-500" />
+            <span className="hidden md:block ml-2 text-sm font-medium">{userName}</span>
           </button>
         </div>
       </div>

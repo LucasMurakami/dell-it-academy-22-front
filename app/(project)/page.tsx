@@ -2,9 +2,7 @@ import Header from "@/app/components/landing-page/Header";
 import Hero from "@/app/components/landing-page/Hero";
 import Features from "@/app/components/landing-page/Features";
 import HowItWorks from "@/app/components/landing-page/HowItWorks";
-import TournamentExample from "@/app/components/landing-page/TournamentExample";
 import EventHistory from "@/app/components/landing-page/EventHistory";
-import RequestDemo from "@/app/components/landing-page/RequestDemo";
 import Footer from "@/app/components/landing-page/Footer";
 
 export default function Home() {
@@ -14,9 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <HowItWorks />
-      <TournamentExample />
       <EventHistory />
-      {/* <RequestDemo /> */}
       <Footer />
     </main>
   );

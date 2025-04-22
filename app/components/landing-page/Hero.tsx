@@ -17,16 +17,15 @@ export default function Hero() {
               Conhecer recursos
             </a>
             <a
-              href="#demo"
+              href="/login"
               className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all"
             >
-              Agendar demonstração
+              Fazer Login ou Registrar
             </a>
           </div>
         </div>
         <div className="md:w-1/2 relative h-64 md:h-96">
-        {/* Achar Imagem para Hero Section */}
-          <div className="absolute inset-0 bg-[url('/hero-image.svg')] bg-contain bg-center bg-no-repeat opacity-90"></div>
+          <div className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-90"></div>
         </div>
       </div>
     </section>

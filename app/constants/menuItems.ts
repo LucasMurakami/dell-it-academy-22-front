@@ -26,7 +26,7 @@ export const menuItems: MenuItem[] = [
     path: "/dashboard/startups",
     submenu: [
       { name: "Ver todas", path: "/dashboard/startups" },
-      { name: "Registrar nova", path: "/dashboard/startups/register" }
+      { name: "Registrar nova", path: "/dashboard/startups/create" }
     ]
   },
   {
@@ -36,26 +36,6 @@ export const menuItems: MenuItem[] = [
     submenu: [
       { name: "Ver todos", path: "/dashboard/tournaments" },
       { name: "Criar novo", path: "/dashboard/tournaments/create" },
-      { name: "Administração", path: "/dashboard/tournaments/admin" }
     ]
   },
-  {
-    name: "Batalhas",
-    icon: FaBolt,
-    path: "/dashboard/battles",
-    submenu: [
-      { name: "Minhas batalhas", path: "/dashboard/battles" },
-      { name: "Administração", path: "/dashboard/battles/admin" }
-    ]
-  },
-  {
-    name: "Histórico",
-    icon: FaHistory,
-    path: "/dashboard/history",
-    submenu: [
-      { name: "Torneios participados", path: "/dashboard/history/tournaments" },
-      { name: "Batalhas participadas", path: "/dashboard/history/battles" },
-      { name: "Administração", path: "/dashboard/history/admin" }
-    ]
-  }
 ];

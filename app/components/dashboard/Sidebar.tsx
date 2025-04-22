@@ -89,12 +89,13 @@ export default function Sidebar({
         </ul>
         
         <div className="mt-8 pt-4 border-t border-gray-200">
-          <button 
+          <Link 
+            href="/"
             className="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md w-full"
           >
             <FaSignOutAlt className="mr-2 text-gray-500" />
             <span>Sair</span>
-          </button>
+          </Link>
         </div>
       </nav>
     </aside>

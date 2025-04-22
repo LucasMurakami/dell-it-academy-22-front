@@ -38,7 +38,7 @@ export default function HowItWorks() {
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
             <h3 className="text-xl font-semibold mb-3 pt-2">Compartilhe Resultados</h3>
             <p className="text-gray-600">
-              Exporte e compartilhe relatórios, resultados e métricas do evento.
+              Veja os resultados e métricas do torneio, e compartilhe com os participantes.
             </p>
           </div>
         </div>

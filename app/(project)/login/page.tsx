@@ -15,12 +15,12 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", { email, password, name });
+    const userName = !isLogin ? name : email.split('@')[0];
+    localStorage.setItem('userName', userName);
     router.push("/dashboard");
   };
 
   const handleGoogleLogin = () => {
-    console.log("Google login clicked");
     router.push("/dashboard");
   };
 
@@ -34,7 +34,7 @@ export default function LoginPage() {
 
   const handleGuestSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Guest/Test login with name:", name);
+    localStorage.setItem('userName', name);
     router.push("/dashboard");
   };
 
