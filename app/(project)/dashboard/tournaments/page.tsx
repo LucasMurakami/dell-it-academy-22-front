@@ -5,8 +5,7 @@ import { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 
 import { getTournaments, Tournament as BaseTournament } from "@/app/api/backend/tournamentsApi";
-import { getTournamentStartupById } from "@/app/api/backend/tournamentStartupsApi";
-import { getStartupById } from "@/app/api/backend";
+import { getStartupById } from "@/app/api/backend/startupsApi";
 
 type Tournament = BaseTournament & { winnerName?: string | null };
 
@@ -22,10 +21,8 @@ export default function ListTournaments() {
         const tournamentsWithWinners = await Promise.all(
           data.map(async (tournament: Tournament) => {
             if (tournament.champion) {
-              const winner = await getTournamentStartupById(tournament.champion);
-              const startupId = Number(winner.startup);
-              const startupName = await getStartupById(startupId);
-              return { ...tournament, winnerName: startupName?.name || "Desconhecido" };
+              const winner = await getStartupById(Number(tournament.champion));
+              return { ...tournament, winnerName: winner?.name || "Desconhecido" };
             }
             return { ...tournament, winnerName: null };
           })

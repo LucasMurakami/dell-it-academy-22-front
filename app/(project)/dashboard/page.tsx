@@ -32,6 +32,8 @@ export default function DashboardHome() {
         
         const active = tournamentsData.filter((t: Tournament) => t.status === "IN_PROGRESS");
         setActiveTournaments(active);
+
+        console.log("Torneios ativos:", active);
         
         const featured = active.length > 0 
           ? active.sort((a: Tournament, b: Tournament) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime())[0] 

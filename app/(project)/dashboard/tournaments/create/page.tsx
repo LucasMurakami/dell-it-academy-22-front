@@ -192,7 +192,7 @@ export default function CreateTournamentPage() {
           <div className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Nome do Torneio
+                Nome do Torneio <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
