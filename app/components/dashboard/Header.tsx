@@ -1,5 +1,8 @@
+"use client";
+
 import { FaRocket, FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import ChatbotButton from "@/app/components/shared/ChatbotButton";
 
 interface HeaderProps {
   sidebarOpen: boolean;
@@ -29,18 +32,18 @@ export default function Header({ sidebarOpen, setSidebarOpen }: HeaderProps) {
           {sidebarOpen ? <FaTimes /> : <FaBars />}
         </button>
         <div className="ml-4 text-lg font-semibold text-blue-900 flex items-center">
-          <FaRocket className="text-blue-600 mr-2" />
+          <FaRocket className="mr-2" /> 
           <span>Startup Showdown</span>
         </div>
       </div>
-      <div className="flex items-center space-x-4">
-        <div className="relative">
-          <button className="flex items-center focus:outline-none">
-            <span className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-              {userInitial}
-            </span>
-            <span className="hidden md:block ml-2 text-sm font-medium">{userName}</span>
-          </button>
+      
+      <div className="flex items-center gap-4">
+        <ChatbotButton />
+        <div className="flex items-center space-x-3">
+          <span className="hidden md:inline text-sm font-medium text-gray-700">{userName}</span>
+          <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
+            {userInitial}
+          </div>
         </div>
       </div>
     </header>
